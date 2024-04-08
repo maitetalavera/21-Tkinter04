@@ -5,7 +5,7 @@ import tkinter as tk
 # In this module, all of the _todo_ items will be in one comment because you
 # will be modifying the same block of code as you go.
 #
-# TODO: 1. (1 pt)
+# DONE: 1. (1 pt)
 #
 #   First, create a tkinter window called window.
 #
@@ -36,3 +36,16 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 ###############################################################################
+
+window=tk.Tk()
+
+def handlername(event):
+    print("yay")
+
+frame_a=tk.Frame(master=window, width="100", height="100", )
+
+frame_a.bind("<Button-1>", handlername)
+frame_a.bind("<Button-2>", handlername)
+
+
+window.mainloop()
