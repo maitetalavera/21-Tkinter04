@@ -1,7 +1,7 @@
 import tkinter as tk
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   For this _todo_, copy your code from your fillable form from Session 20 and
 #   paste it below.
@@ -38,8 +38,8 @@ f7 = tk.Frame(window, bg="red", padx=5, pady=5)
 f8 = tk.Frame(window, bg="red", padx=5, pady=5)
 
 f1.grid(row=0, column=0, padx=5, pady=5, sticky="nsew")
-f2.grid(row=1, column=0, padx=5, pady=5)
-f3.grid(row=2, column=0, padx=5, pady=5)
+f2.grid(row=1, column=0, padx=5, pady=5, sticky="nsew")
+f3.grid(row=2, column=0, padx=5, pady=5, sticky="nsew")
 f4.grid(row=3, column=0, padx=5, pady=5, sticky="nsew")
 f5.grid(row=4, column=0, padx=5, pady=5, sticky="nsew")
 f6.grid(row=5, column=0, padx=5, pady=5, sticky="nsew")
@@ -70,19 +70,32 @@ l8.pack()
 
 entry1=tk.Entry(f1)
 entry1.pack()
-entry1=tk.Entry(f2)
-entry1.pack()
-entry1=tk.Entry(f3)
-entry1.pack()
-entry1=tk.Entry(f4)
-entry1.pack()
-entry1=tk.Entry(f5)
-entry1.pack()
-entry1=tk.Entry(f6)
-entry1.pack()
-entry1=tk.Entry(f7)
-entry1.pack()
-entry1=tk.Entry(f8)
-entry1.pack()
+entry2=tk.Entry(f2)
+entry2.pack()
+entry3=tk.Entry(f3)
+entry3.pack()
+entry4=tk.Entry(f4)
+entry4.pack()
+entry5=tk.Entry(f5)
+entry5.pack()
+entry6=tk.Entry(f6)
+entry6.pack()
+entry7=tk.Entry(f7)
+entry7.pack()
+entry8=tk.Entry(f8)
+entry8.pack()
+
+def print_form():
+    print(entry1.get())
+    print(entry2.get())
+    print(entry3.get())
+    print(entry4.get())
+    print(entry5.get())
+    print(entry6.get())
+    print(entry7.get())
+    print(entry8.get())
+
+button=tk.Button(master=window, text="submit", command=print_form)
+button.grid()
 
 window.mainloop()
