@@ -24,7 +24,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 3. (2 pts)
+# DONE: 3. (2 pts)
 #
 #   For this _todo_, write a function called that update() that takes two
 #   parameters:
@@ -37,7 +37,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 4. (3 pts)
+# DONE: 4. (3 pts)
 #
 #   For this _todo_, write an event handler function to handle any keypress. In
 #   the function, check if the key pressed is a number (remember that you can
@@ -48,7 +48,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 5. (1 pt)
+# DONE: 5. (1 pt)
 #
 #   Now, bind your window to your event handler.
 #
@@ -59,9 +59,18 @@ import tkinter as tk
 window=tk.Tk()
 
 frame_b=tk.Frame(master=window, width="50", height="50")
-label=tk.Label("")
+frame_b.pack()
+label=tk.Label(master=window,text="")
+label.pack()
 
 def update(lbl, text):
-    
+    lbl.configure(text=text)
+
+def keyhandler(event):
+    if event.char.isdigit():
+        update(label, event.char)
+
+window.bind("<Key>", keyhandler)
+
 
 window.mainloop()
