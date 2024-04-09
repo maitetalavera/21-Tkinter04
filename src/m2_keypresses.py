@@ -5,7 +5,7 @@ import tkinter as tk
 # In this module, all of the _todo_ items will be in one comment because you
 # will be modifying the same block of code as you go.
 #
-# TODO: 1. (1 pt)
+# DONE: 1. (1 pt)
 #
 #   First, create a tkinter window called window.
 #
@@ -15,7 +15,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #   
 #   Now, create a frame called frm_b that has a width of 50 and a height of 50.
 #
@@ -55,3 +55,13 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 ###############################################################################
+
+window=tk.Tk()
+
+frame_b=tk.Frame(master=window, width="50", height="50")
+label=tk.Label("")
+
+def update(lbl, text):
+    
+
+window.mainloop()
