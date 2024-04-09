@@ -13,7 +13,7 @@ import tkinter as tk
 ###############################################################################
 
 ###############################################################################
-# TODO: 2. (1 pt)
+# DONE: 2. (1 pt)
 #
 #   Now, use the command keyword to connect your "Submit" button to your
 #   print_form() function.
