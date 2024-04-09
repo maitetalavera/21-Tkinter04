@@ -40,12 +40,16 @@ import tkinter as tk
 window=tk.Tk()
 
 def handlername(event):
-    print("yay")
+    print("left")
 
-frame_a=tk.Frame(master=window, width="100", height="100", )
+def handlername2(event):
+    print("right")
+
+frame_a=tk.Frame(master=window, width="100", height="100", bg="red")
+frame_a.pack()
 
 frame_a.bind("<Button-1>", handlername)
-frame_a.bind("<Button-2>", handlername)
+frame_a.bind("<Button-3>", handlername2)
 
 
 window.mainloop()
